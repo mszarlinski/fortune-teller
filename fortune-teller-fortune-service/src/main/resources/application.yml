@@ -3,6 +3,10 @@ spring:
     hibernate:
       ddl-auto: create-drop
 
+endpoints:
+  health:
+    sensitive: false
+
 ---
 
 spring:
@@ -23,3 +27,10 @@ spring:
   profiles: pws
   jpa:
     database: POSTGRESQL
+
+---
+
+spring:
+  profiles: lattice
+  jpa:
+    database: MYSQL
